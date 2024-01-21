@@ -9,8 +9,6 @@ priceElements.forEach((priceElement) => {
     const free = !shipping.textContent.startsWith('+EUR')
     if (free) return;
 
-    console.log(price, shipping.textContent)
-
     const priceNumber = Number.parseFloat(price.slice('EUR '.length).replace(',', '.'))
     const shippingCostText = shipping.textContent.slice('+EUR '.length, shipping.textContent.lastIndexOf(' '))
     const shippingCost = Number.parseFloat(shippingCostText.replace(',', '.'))
